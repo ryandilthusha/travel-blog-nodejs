@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+    <link href="./css/custom.css" rel="stylesheet">
+
+    <!-- Font Awesome for a wide range of icons and css file for icons -->
+    <link rel="stylesheet" href="/public/images/fontawesome-free-6.5.2-web/css/all.css">
+
+    <!-- Path to nav bar css and it related css importing URL --> 
+    <link href="./css/navbar.css" rel="stylesheet">
+
+    <title> Travel Blog</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <section class="custom-width">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container" style="position: relative;">
+                <a class="navbar-brand" href="./index.html"><img src="./images/logo-large.png" alt="Logo" width="200px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse items-orientation" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto text-white">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item sesion-active">
+                            <a class="nav-link" href="./allposts.html">My posts</a>
+                        </li>
+                        <li class="nav-item sesion-active">
+                            <a class="nav-link" href="./profile.html">My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./aboutus.html">About Us</a>
+                        </li>   
+                 
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./contactus.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./reportus.html">Report Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#navbarSearch">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item sesion-inactive btn-login">
+                            <a class="nav-link login-link" href="./login.html">Login</a>
+                        </li>
+                        <li class="nav-item  sesion-active">
+                            <a class="nav-link login-link" id="logout_nav_item" href="#">Logout</a>
+                        </li>                        
+                    </ul>
+                </div>
+
+                <div class="collapse" id="navbarSearch">
+                    <form class="d-flex ms-auto">
+                        <input id="searchInput" class="form-control me-2" type="search" placeholder="Search a Topic" aria-label="Search">
+                        <button id="btn_search" class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </section>
+    
+    <!-- EndNavigation -->
+
+ 
+  <div class="container" style="min-height: 80vh; padding-top: 60px;">
+    <div class="row justify-content-center">
+        <!--Contact information-->    
+    <div class="col-md-7">
+      <h1 class="tb bar">Contact us</h1>
+      <br>
+      <div class="article head">
+        <h3>Your Contact Information</h3>
+        </div>
+      <br>
+      <form method="POST" action="/Utils/contact" name="contact" id="contact-us" class="form">
+            <!--Name-->
+            <div class="mb-3">
+            <label for="name" class="form-label">Name  *</label>
+            <input id="fullname" class="form-control" type="text" maxlength="30" size="20" name="name" required placeholder="your firstname  and  lastname">
+                </div>
+            <!--Contact number-->
+            <div class="mb-3">
+                <label for="contactnumber" class="form-label">Contact number (Optional)</label>
+                <input id="contactnumber" class="form-control" type="text" name="contactnumber" required placeholder="your phone number with country code">
+            </div>
+            <!--E mail address-->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address *</label>
+                <input id="email" class="form-control" type="email" name="email" required placeholder="your email address">
+                </div>
+            <!--Comments or Message-->
+            <div class="mb-3">
+                <label for="comments" class="form-label">Comments or Message *</label>
+                <textarea id="message" class="form-control" name="comments" rows="5" required placeholder="Write your message here..."></textarea>
+            </div>
+            <div id="errorMessages"></div>
+            <!--Send button-->  
+                    <div class="d-grid gap-2">
+                       <button id="contact_btn" type="submit" class="btn btn-primary">Send</button>
+                </div>
+                <div class="ms-5 d-flex mt-3"> 
+                    <i class="bi bi-geo-alt me-2"></i>
+                    <div class="text-primary">
+                    Kaarrostie 83, 01260 vantaa Finland
+                    </div>
+                </div>
+                <div class="ms-5 d-flex mt-3">
+                    <i class="bi bi-telephone me-2"></i>
+                    <div class="text-primary">
+                        call: +3580404093947
+                            </div>
+                        </div>
+                </form>
+            </div>
+           
+        </div>
+    </div>
+    
+   <!-- Start footer -->
+<br>
+<section class="container-fluid g-0 custom-footer">
+    <div class="container">
+        <div class="row py-4 text-white">
+            <div class="col-12 text-center">  <!-- Changed for centering text -->
+                Copyright &copy; 2024. All rights reserved.
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End footer -->
+
+
+<button id="backToTopBtn" title="Go to top" style="display: none;">↑ Top</button>
+
+    <script src="./js/nav.js"></script>
+    <script src="./js/contactus.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

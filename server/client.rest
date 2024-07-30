@@ -1,0 +1,12 @@
+#### This is Like a Fake Interface To GET or POST something to Database server without using Front End UI
+
+### Add new user
+# This will create a new user with the provided username, password, and bio in the JSON payload.
+POST http://localhost:3001/api/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "RyanWick1",
+  "password": "123",
+  "bio": "Hey there, I'm from Sri Lanka."
+}

@@ -1,0 +1,191 @@
+
+.sesion-active{display: none;}
+.sesion-inactive{display: block;}
+
+#navbarSearch{
+    position: absolute;
+    margin-top: 20px;
+    right: 0;
+    top: 50px;
+    z-index: 999;
+    background-color: #212529!important;
+    padding: 10px;
+    border-radius: 20px;
+}
+#searchInput{
+    height: 40px;
+    margin-top: 11px;
+    margin-left: 10px;
+}
+
+/* Ensure navbar inherits font family and sets background explicitly */
+.navbar {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333; /* Adjust the color to fit your design */
+}
+
+/* Specific navbar link styles to override Bootstrap or other styles */
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+/* Active link styling */
+.navbar-dark .navbar-nav .nav-item.active .nav-link {
+    color: #94e0ee;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+/* Ensures that navbar items are flex and align to the right in large screens */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        justify-content: flex-end; /* Aligns items to the right */
+    }
+}
+
+
+
+.login-link{
+    margin-left: 30px;
+    font-weight: bold;
+    color: #f30e0e !important;
+}
+
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+/* Drop down menu styles */
+/* Dropdown Styles */
+.navbar .dropdown-menu {
+    background-color: #333; /* Same as navbar for consistency */
+    border: none; /* Removes the default border */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    margin-top: 5px; /* Small space between the dropdown toggle and the dropdown menu */
+}
+
+/* Dropdown item styling */
+.navbar .dropdown-item {
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 20px; /* Slightly larger horizontal padding for better spacing */
+}
+
+/* Dropdown item hover and focus styles */
+.navbar .dropdown-item:hover, .navbar .dropdown-item:focus {
+    color: #cccccc;
+    background-color: #222; /* Darker than the dropdown menu for distinction */
+    text-decoration: none;
+}
+
+/* Active dropdown item styling */
+.navbar .dropdown-item.active, .navbar .dropdown-item:active {
+    color: #94e0ee; /* Light blue to match the active nav link */
+    background-color: #444; /* Slightly darker than the dropdown menu for visibility */
+}
+
+
+
+
+
+/* Additional styles for the navbar search form */
+.navbar .collapse form {
+    margin-top: 0.5rem; /* Provides spacing from the navbar */
+}
+
+.navbar .form-control {
+    border-color: #fff; /* Matches the navbar theme */
+    color: #fff;
+    background-color: transparent;
+}
+
+.navbar .btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.navbar .form-control:focus {
+    background-color: #333; /* Slightly darker background on focus */
+    color: #fff;
+    border-color: #aaa; /* Lighter border to indicate focus */
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: #28a7a1;
+    color: #fff;
+}
+
+/* Placeholder styles */
+.navbar .form-control::placeholder {
+    color: #bbb; /* Lighter text color for placeholder */
+    opacity: 1; /* Full opacity to ensure visibility */
+}
+
+
+
+
+
+
+/* Search Link Grey */
+.navbar .nav-link.search-link {
+    color: #ffffff; /* Greyed out */
+    cursor: not-allowed; /* Change cursor to indicate disabled link */
+    pointer-events: none; /* Disable link interactions */
+    opacity: 0.5; /* Further indicate it's disabled */
+}
+
+.navbar-dark .navbar-nav .nav-link.disabled {
+    color: #ffffff; /* Greyed out */
+}
+
+
+
+.btn {
+    margin: 10px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+
+.nav-link .fa-magnifying-glass {
+    font-size: 1.2em;  /* Adjust the size as needed */
+    vertical-align: middle;  /* Aligns the icon vertically within the line */
+}
+
+
+

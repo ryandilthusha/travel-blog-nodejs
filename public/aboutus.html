@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome for a wide range of icons and css file for profile -->
+    <link rel="stylesheet" href="/public/images/fontawesome-free-6.5.2-web/css/all.css">
+    <link rel="stylesheet" href="./css/about.css"> <!-- Path to profile custom CSS -->   
+
+    <!-- Path to nav bar css and it related css importing URL --> 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href="./css/navbar.css" rel="stylesheet">
+    <link href="./css/about.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <section class="custom-width">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container" style="position: relative;">
+                <a class="navbar-brand" href="./index.html"><img src="./images/logo-large.png" alt="Logo" width="200px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse items-orientation" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto text-white">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item sesion-active">
+                            <a class="nav-link" href="./allposts.html">My posts</a>
+                        </li>
+                        <li class="nav-item sesion-active">
+                            <a class="nav-link" href="./profile.html">My Profile</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./aboutus.html">About Us</a>
+                        </li>   
+                 
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contactus.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./reportus.html">Report Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#navbarSearch">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item sesion-inactive btn-login">
+                            <a class="nav-link login-link" href="./login.html">Login</a>
+                        </li>
+                        <li class="nav-item  sesion-active">
+                            <a class="nav-link login-link" id="logout_nav_item" href="#">Logout</a>
+                        </li>                        
+                    </ul>
+                </div>
+
+                <div class="collapse" id="navbarSearch">
+                    <form class="d-flex ms-auto">
+                        <input id="searchInput" class="form-control me-2" type="search" placeholder="Search a Topic" aria-label="Search">
+                        <button id="btn_search" class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <div class="container ">
+        <div class="card my-5 container border-0">
+            <div class="row g-0">
+                <div class="col-md-8  rounded-3 ">
+                    <div class="card-body">
+                        <h1 class="card-title">Welcome to Travel Blog!</h1> <br>
+                        <p class="card-text" style="text-align: justify; padding-right: 50px;" >We are a passionate team of travel enthusiasts dedicated to bringing you the best 
+                            of the world's destinations, experiences, and hidden gems. Whether you're an avid adventurer, 
+                            a culture seeker, or simply looking for your next getaway inspiration, you'll find a home here</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="./images/about us.jpg" class="img-fluid rounded-end " alt="...">
+                </div> 
+            </div>
+
+        </div>
+
+        <div class="border border-bottom-1  "></div>
+
+        <div class="container mt-3 ">
+            <div class="row-justify content-center ">
+
+                <div class="card my-5 shadow p-3 mb-5 bg-body-tertiary rounded">
+                    <div class="row g-0">
+                        <div class="col-md-8  rounded-3 ">
+                            <div class="card-body">
+                                <h3 class="card-title">Our Mission</h3> <br>
+                                <p class="card-text" style="text-align: justify; padding-right: 50px;" >At Travel Blog, we believe that every journey is a story waiting to be told. 
+                                    Our mission is to inspire and empower fellow travellers like you to explore the world with curiosity and wanderlust. 
+                                    From sharing captivating travel narratives to providing practical tips and insights, we aim to be your trusted companion on your travel journey.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="./images/sea-01.jpg" class="img-fluid rounded-end rounded-pill  " alt="...">
+                        </div> 
+                    </div>
+                </div>
+        
+        
+                <div class="card my-5 shadow p-3 mb-5 bg-body-tertiary rounded">
+                    <div class="row g-0">
+                        <div class="col-md-12  rounded-3 ">
+                            <div class="card-body our_offer " >
+                                <img src="./images/maldives.jpg" alt="Notebook" style="width:100%;">
+                                <div class="content">
+                                <h3 class="card-title">What We Offer</h3> <br>
+                                <p class="card-text" style="text-align: justify; padding-right: 50px;" >Captivating Stories: Immerse yourself in our collection of travel tales from across the globe. 
+                                    From off-the-beaten-path adventures to must-see landmarks, our stories paint vivid pictures of the world's wonders.</p>
+
+                                <p class="card-text" style="text-align: justify; padding-right: 50px;" >Interactive Experience: Engage with our community through comments and likes on posts. 
+                                    Share your thoughts, experiences, and recommendations with fellow travellers, creating a vibrant tapestry of shared knowledge.</p>
+                                
+                                <p class="card-text" style="text-align: justify; padding-right: 50px;" >User-Friendly Features: Our platform offers easy registration and login features, allowing you to become a part of our community effortlessly. 
+                                    Edit and delete your posts or comments, ensuring your voice is heard and your content is just right.</p>
+                                    
+                                <p class="card-text" style="text-align: justify; padding-right: 50px;" >Discover and Connect: Use our search feature to find specific destinations or topics of interest. 
+                                    Have feedback or spotted something inappropriate? Reach out to us through our report us form; your input helps us improve and maintain the quality of our content.
+                                </p>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 ">
+            <div class="col shadow p-3 mb-5 bg-body-tertiary">
+              <div class="card h-100">
+                <img src="./images/team.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Our Team</h5>
+                  <p class="card-text">Behind Travel Blog is a diverse team of writers, photographers, and travel enthusiasts who are passionate about storytelling. We come from different corners of the world, each bringing a unique perspective and love for travel. 
+                    Together, we curate and create content that we hope will inspire your next adventure.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col shadow p-3 mb-5 bg-body-tertiary">
+              <div class="card h-100">
+                <img src="./images/touch.jpg" class="card-img-top" alt="..." >
+                <div class="card-body">
+                  <h5 class="card-title">Get in Touch</h5>
+                  <p class="card-text">We would love to hear from you! Whether you have a question, a suggestion, or simply want to share your travel experiences, don't hesitate to reach out. Connect with us on social media or drop us a message through our contact form.
+                    Your stories, feedback, and adventures are what keep us inspired.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-md text-center" style="font-size: x-large; font-family: serif; ">
+            <p class="lh-sm"><b>Thank you for being part of the Travel blog community. Let's embark on this journey together, 
+                one story at a time. </b></p>
+            <p class="lh-sm" style="text-align: center;"><b>Happy Travels !</b></p>
+        </div>
+
+
+
+    </div>
+
+   <!-- Start footer -->
+<br>
+<section class="container-fluid g-0 custom-footer">
+    <div class="container">
+        <div class="row py-4 text-white">
+            <div class="col-12 text-center">  <!-- Changed for centering text -->
+                Copyright &copy; 2024. All rights reserved.
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End footer -->
+
+
+<button id="backToTopBtn" title="Go to top" style="display: none;">↑ Top</button>
+
+    <script src="./js/nav.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

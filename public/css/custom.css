@@ -1,0 +1,552 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+body {
+    font-family: 'Montserrat';
+}
+
+a{ text-decoration: none;}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1);
+}
+
+.login-link{
+    margin-left: 30px;
+    font-weight: bold;
+    color: #f30e0e !important;
+}
+
+.main-nav{
+    padding: 10px 0;
+    background-color: #0404044f;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.rounded-pill{
+    padding: 6px 15px;
+    display: block;
+    border-radius: 100px;
+    color: #8d8d8d;
+    font-weight: 400;
+    border: 1px solid #e6e6e6;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0s background ease-in-out;
+    background-color: transparent;
+}
+
+.rounded-pill:active, .rounded-pill:hover{
+    background-color: #47c9e5 !important;
+    color: #000000 !important;
+}
+
+.nav-pills .active{
+    background-color: #47c9e5 !important;
+    color: #fff!important;
+}
+
+
+/* 
+div[class*="col-lg-"]{
+    border: thin solid red;
+}
+
+.scrolled {
+    background: yellow !important;
+}
+*/
+
+/* Post section */
+
+.blog-card .post-meta {
+    font-size: 12px;
+}
+
+.blog-card .post-title h2 {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    color: #3f3f3f;
+    margin-top: 12px;
+    margin-bottom: 14px;
+    line-height: 100% !important;
+    transition: .25s all ease;
+
+}
+
+.blog-card .post-content {
+    padding-bottom: 28px;
+    word-break: break-word;
+    font-family: "Raleway";
+    color: #8d8d8d;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.blog-card .post-meta-two {
+    margin-left: -17px;
+    position: relative;
+    font-size: 12px;
+    color: #8d8d8d;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.blog-card .post-meta-author a.bypostauthor {
+    font-weight: 400;
+    color: #8d8d8d;
+    width: 80px;
+}
+
+.post-meta-categories {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #8d8d8d;
+}
+
+.blog-card .post-meta-comments {
+    position: relative;
+}
+
+.blog-card a.post-meta-comments, .blog-card a.post-meta-likes {
+    background-color: #f6f6f6;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: -41px;
+    right: 70px;
+    padding: 0 17px;
+    border-radius: 100px;
+    transition: .3s all ease-in-out;
+    color: #8d8d8d;
+    z-index: 999;
+}
+
+.blog-card a.post-meta-likes{
+    right: 5px;
+}
+.post-card-cat{
+    border-top: 1px solid #e9e9e9;
+    position: relative;
+    left: -14px;
+    top: -19px;
+    width: 65%;
+    padding: 20px 30px 0px 30px
+}
+
+.blog-card a.post-meta-comments i {
+    padding-right: 3px;
+}
+
+
+/* Side Bar */
+
+.side-bar .widget-title{
+    color: #505050;
+    font-size: 20px;
+}
+
+.recent-posts .ratio-container .ratio{
+    border-radius: 100px;
+    overflow: hidden;
+    z-index: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.recent-posts .recent-content{
+    padding-left: 20px;
+    min-height: 76px;
+}
+
+.recent-posts .recent-content h6{
+    font-family: "Montserrat";
+    color: #3f3f3f;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 16px;
+    padding-top: 2px;
+}
+
+.recent-posts .single-recent {
+    border-bottom: 2px solid #f4f4f4;
+}
+
+/* Footer */
+
+.footer-social i{
+    font-size: 25px;
+    color: #fff;
+    padding: 0 5px;
+}
+.recent-posts-tag a {
+    border-radius: 8px ;
+    padding: 8px;
+    margin: 5px;
+    font-size:14px;
+    transition-duration: 0.3s;
+    background-color: #f0f0f0;
+    font-weight:bold;
+    color: #8d8d8d;
+    
+    
+}
+.recent-posts-tag a:hover {
+    background-color: #47c9e5;
+    
+}
+
+.recent-posts-tag {
+   max-width: max-content;
+   margin: 3px;
+   margin-left: 0px;
+}
+
+.footer-tag-content  a {
+
+    background-color: #3a3a3a;
+    color: #c8c8c8;
+    
+    
+}
+
+/*Start custom css for the addPost.html*/
+
+.custom-textarea{
+
+    max-height: 10cm;
+} 
+
+::placeholder{
+    vertical-align: top;
+}
+
+a{
+    color: #b50808;
+}
+
+.preview{
+    margin-left: auto;
+}
+
+.publish {
+    background-color: #e2a2a2;
+    padding: 2px;
+    border: 0.5px solid black;
+
+    
+}
+
+.add {
+    background-color: #d6d6d6;
+    padding: 2px;
+    border: 0.5px solid black;
+    
+}
+.bg-color{
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.bg-color-publish{
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.image-content{
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+
+
+.main-post-avatar {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+  }
+
+/*New - Hot Topics*/
+/* Side Bar and Hot Topics Enhancements */
+.side-bar {
+    padding: 0px;
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.widget-title {
+    font-size: 24px;
+    color: var(--link-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.single-recent {
+    transition: background-color 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.single-recent:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+    
+}
+.single-recent:hover .recent-content h6{
+    color: #47c9e5 !important;
+}
+
+.recent-image {
+    margin-right: 10px;
+}
+
+.recent-content h6 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.recent-content p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Improved Loading and Error States */
+.loading, .error-message {
+    text-align: center;
+    color: #dc3545;
+}
+
+
+
+
+
+/*New - Main Posts*/
+/* Category Buttons and Add Post Button */
+.btn {
+    margin: 10px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.nav-pills .btn.active, .nav-pills .btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Masonry Area - Post Cards */
+.card {
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+.card:hover .card-body h2 {
+    color: #47c9e5!important;
+}
+
+
+.card-img-top {
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px 15px 0px 15px;
+}
+
+.post-title h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.post-content {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Responsive Layout for Post Cards */
+@media (max-width: 768px) {
+    .card {
+        margin: 5px;
+    }
+
+    .card-img-top {
+        height: 180px;
+    }
+}
+
+/* Error Message Style */
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+
+/*New - Add Post and Ctegories*/
+/* Add Post Button Styling */
+.add-post-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 30px; /* More pronounced rounded corners */
+    transition: background-color 0.3s, transform 0.3s;
+    border-color: #35b8d0;
+    background-color: #94e0ee;
+    color: #000;
+}
+
+.btn-primary i {
+    margin-left: 5px;
+    color: #202321 !important; /* Make icon color consistent */
+}
+
+.btn-primary:hover {
+    background-color: #35d2ef;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Category Buttons */
+.category-buttons .nav-link {
+    background-color: #f8f9fa;
+    color: #555;
+    margin: 5px;
+    padding: 8px 16px;
+    border-radius: 20px; /* Soften the rounded corners */
+    transition: all 0.3s ease;
+}
+
+.category-buttons .nav-link:hover, .category-buttons .nav-link.active {
+    color: white;
+    background-color: #47c9e5;
+
+}
+
+.category-area {
+    margin-bottom: 20px; /* Additional spacing below the category area */
+}
+
+
+
+
+/*New - Carousel*/
+/* Carousel Section */
+.carousel-section {
+    margin-top: 0px; /* Ensure some space from the previous section */
+}
+
+.carousel .carousel-inner .carousel-item img {
+    height: 500px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure images cover the area nicely */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    border-radius: 10px; /* Rounded corners for the caption box */
+    padding: 20px; /* Padding for spacing inside the caption box */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000; /* Solid background for better visibility */
+    border-radius: 50%; /* Circle shaped controls */
+    padding: 10px; /* Padding around arrows */
+}
+
+.carousel-indicators button {
+    background-color: #007bff; /* Indicator buttons blue to match the theme */
+    border: none; /* Remove any default border */
+}
+
+.carousel-indicators .active {
+    background-color: #fff; /* Active indicator is white */
+}
+
+
+/* ------------ Footer Styles ------------*/
+.custom-footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Moved from inline style to CSS for better maintenance */
+    display: flex;  /* Using Flexbox */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    padding: 1px 0; /* Padding for some spacing around the content */
+}
+
+.custom-footer .container {
+    width: 100%;  /* Ensures container takes full width available */
+    max-width: 960px; /* Maximum width of the content if needed */
+}
+
+.custom-footer .row {
+    flex-grow: 1; /* Ensures it takes available space in flex container */
+}
+
+.custom-footer .col-12 {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+
+
+/* ------------ Go To Top Button ------------*/
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    display: none; /* Hidden by default */
+}
+
+#backToTopBtn:hover {
+    background-color: #00aeff; /* Add a hover effect */
+}

@@ -1,0 +1,15 @@
+### Add new post
+POST http://localhost:3001/newPost/new/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxMzk0MTY0NywiZXhwIjoxNzEzOTcwNDQ3fQ.v7FvK-DAWMQUJMCg_9mrAo-MEKs3rvfGMtFMdmU0k-c
+
+{
+    "title": "Ryan",
+    "catName":"Fun",
+    "content": "Hi",
+    "coverpic": "/public/images/post/post_2.jpg"
+    
+}
+
+### Delete post
+DELETE http://localhost:3001/delete/10 HTTP/1.1

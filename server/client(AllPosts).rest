@@ -1,0 +1,33 @@
+###Get a Post Specific Details
+GET http://localhost:3001/allposts/getAllPosts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxNDA4MTg5MSwiZXhwIjoxNzE0MTEwNjkxfQ.EN_vSKibaY_ZpldwfLYBM7zSupTmmk0V5_hBA2hDSDY
+
+###Update a Post Specific Details
+POST http://localhost:3001/allposts/updatePost/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxMzkzOTg2MiwiZXhwIjoxNzEzOTY4NjYyfQ.G1dJipFTrhH1RYaiCjCmv7Dq8Za9_NQe_mWRyCJvJ18
+
+{
+    "title":"New Title",
+    "content":"New Content",
+    "cover_image":"./images/post/post_4.jpg",
+    "post_id":"34"
+}
+
+
+###DELETE a Specific Post
+DELETE http://localhost:3001/allposts/deletePost/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxMzkzOTg2MiwiZXhwIjoxNzEzOTY4NjYyfQ.G1dJipFTrhH1RYaiCjCmv7Dq8Za9_NQe_mWRyCJvJ18
+
+{
+    "post_id":"34"
+}
+
+
+
+### Search a Title or Content
+GET http://localhost:3001/allposts/search?query=new
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxMzk5NTgzNSwiZXhwIjoxNzE0MDI0NjM1fQ.6ORUS-s0gwtNxThAV21jSu_N5Ek9gv1aUuT6GsNvBpc

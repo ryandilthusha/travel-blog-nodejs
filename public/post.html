@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CompanyName</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/post.css" />
+
+    <!-- Font Awesome for a wide range of icons and css file for profile -->
+    <link rel="stylesheet" href="/public/images/fontawesome-free-6.5.2-web/css/all.css">
+
+    <!-- Path to nav bar css and it related css importing URL --> 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href="./css/navbar.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<section class="custom-width">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container" style="position: relative;">
+          <a class="navbar-brand" href="./index.html"><img src="./images/logo-large.png" alt="Logo" width="200px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse items-orientation" id="navbarResponsive">
+              <ul class="navbar-nav ms-auto text-white">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="./index.html">Home</a>
+                  </li>
+
+                  <li class="nav-item sesion-active">
+                      <a class="nav-link" href="./allposts.html">My posts</a>
+                  </li>
+                  <li class="nav-item sesion-active">
+                      <a class="nav-link" href="./profile.html">My Profile</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./aboutus.html">About Us</a>
+                  </li>   
+           
+                  <li class="nav-item">
+                      <a class="nav-link" href="./contactus.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./reportus.html">Report Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#navbarSearch">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item sesion-inactive btn-login">
+                      <a class="nav-link login-link" href="./login.html">Login</a>
+                  </li>
+                  <li class="nav-item  sesion-active">
+                      <a class="nav-link login-link" id="logout_nav_item" href="#">Logout</a>
+                  </li>                        
+              </ul>
+          </div>
+
+          <div class="collapse" id="navbarSearch">
+              <form class="d-flex ms-auto">
+                  <input id="searchInput" class="form-control me-2" type="search" placeholder="Search a Topic" aria-label="Search">
+                  <button id="btn_search" class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+          </div>
+      </div>
+  </nav>
+</section>
+
+<div class="container mt-5">
+  <div class="row d-flex align-items-start">
+
+    <!-- Post Column -->
+    <div class="col-md-8">          
+      <div class="post mb-3">
+        <p class="fs-3" id="post_title">Blog Topic</p>
+        <p id="post_id" hidden>Post Id</p>
+        <p id="user_id" hidden>User Id</p>
+        <div style="text-align: center; margin: auto;">
+          <img src="" id="post_image" class="post-img" alt="Post Image"/>
+        </div>
+        
+
+        <div class="btn-group mt-3">
+          <button class="icon-button1" id="btn_like">
+            <i class="fa-regular fa-heart fa-xl"></i>
+          </button>
+          <span class="total-like" id="like_count">999+</span>
+          
+          <button class="icon-button2" disabled>
+            <i class="fa-regular fa-comment fa-xl"></i>
+          </button>
+          <span class="total-comments" id="comment_count">999+</span>
+
+          <!-- Report Button with link to specific post page -->
+          <button class="icon-button3 ml-auto" id="btn_report">
+            <i class="fa-regular fa-flag fa-lg" style="color: #ff0000;"></i>
+            </button>
+          </div>   
+
+        <div class="post-body mt-3 bg-white shadow-sm p-3 mb-5 bg-body rounded">
+          <div class="post-metadata d-flex align-items-center">
+            <img src="./images/postpage/avatar.jpg" id="author_image" alt="Avatar" class="profile-header-img " style="width: 50px; height: 50px; cursor: pointer;"/>
+            <div>
+              <p class="post-author mb-0 me-3" id="author_name">by Xuan</p>
+              <p class="updatedtime mb-0 text-muted">
+                <small> <span id="post_date"></span></small>
+              </p>
+            </div>
+          </div>             
+
+          <p class="post-text pt-3 mt-3 border-top" id="post_content">This is the post body</p>
+
+          <!-- Make a Comment -->
+          <br>
+          <div class="form-group mt-4 comment-box">
+            <label for="comment_area">Leave a Comment</label>
+            <textarea class="form-control" id="comment_area" rows="3"></textarea>
+            <br>
+            <div id="errorMessages"></div>
+            <button id="comment_btn" class="btn btn-primary mt-2">Submit</button>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Comments Column -->
+    <div id="post_comments" class="comments-section col-md-4">
+      <span>Comments: </span>
+        <!-- Comments will dynamically load here -->
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ---------------------------- Comment Modal ---------------------------- -->
+<div class="modal fade" id="editCommentModal" tabindex="-1" aria-labelledby="editCommentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="editCommentModalLabel">Edit Comment</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form id="editCommentForm">
+                  <div class="mb-3">
+                      <label for="editCommentText" class="form-label">Comment</label>
+                      <textarea class="form-control" id="editCommentText" rows="3"></textarea>
+                      <input type="hidden" id="editingCommentId">
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="submitEditComment()">Save changes</button>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Start footer -->
+<br>
+<section class="container-fluid g-0 custom-footer">
+    <div class="container">
+        <div class="row py-4 text-white">
+            <div class="col-12 text-center">  <!-- Changed for centering text -->
+                Copyright &copy; 2024. All rights reserved.
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End footer -->
+
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+  crossorigin="anonymous"
+></script>
+<script src="./js/post.js"></script>
+<script src="./js/nav.js"></script>
+</body>
+</html>

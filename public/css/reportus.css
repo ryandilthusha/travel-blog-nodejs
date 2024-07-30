@@ -1,0 +1,107 @@
+/* Container for the report section */
+.report-section {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for distinct appearance */
+    /*box-shadow: 0 40px 80px rgba(255, 225, 255, 0.923), 0 16px 40px rgba(255, 255, 255, 0.94);*/
+    
+}
+.bi-exclamation-triangle-fill{
+    color: red;
+}
+
+.report-section h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Styling for form elements */
+.form-label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 10px;
+    font-size: 16px; /* Larger font size for easier reading */
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Extra margin for the button to separate it from the textarea */
+.btn-primary {
+    margin-top: 10px;
+}
+
+.image-container{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.report-card{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)  !important;
+    border: none;
+    padding: 20px 0;
+    max-height: 575px;
+    overflow: hidden;
+
+}
+
+
+/* Post Preview Styles */
+/* Post Preview Styles */
+.post-preview-container {
+    width: 100%; /* Use full container width */
+   
+    margin-top: 20px; /* Center it horizontally */
+   
+    border-radius: 8px; /* Rounded corners */
+    background: white; /* Background color */
+}
+
+.card-img-top {
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    padding: 10px;
+}
+
+.card-body {
+    padding: 15px; /* Padding inside the card */
+    overflow-y: scroll;
+    scrollbar-width: auto;
+    scrollbar-width: thin;
+}
+
+.card-title, .card-text {
+    margin-bottom: 10px; /* Space between title and content */
+}
+

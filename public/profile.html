@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome for a wide range of icons and css file for profile -->
+    <link rel="stylesheet" href="/public/images/fontawesome-free-6.5.2-web/css/all.css">
+    <link rel="stylesheet" href="./css/profile.css"> <!-- Path to profile custom CSS -->   
+
+    <!-- Path to nav bar css and it related css importing URL --> 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href="./css/navbar.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+
+    
+
+    
+</head>
+<body>
+
+    <!-- Navigation -->
+    <section class="custom-width">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container" style="position: relative;">
+                <a class="navbar-brand" href="./index.html"><img src="./images/logo-large.png" alt="Logo" width="200px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse items-orientation" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto text-white">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item sesion-active">
+                            <a class="nav-link" href="./allposts.html">My posts</a>
+                        </li>
+                        <li class="nav-item sesion-active active">
+                            <a class="nav-link" href="./profile.html">My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./aboutus.html">About Us</a>
+                        </li>   
+                 
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contactus.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./reportus.html">Report Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#navbarSearch">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item sesion-inactive btn-login">
+                            <a class="nav-link login-link" href="./login.html">Login</a>
+                        </li>
+                        <li class="nav-item  sesion-active">
+                            <a class="nav-link login-link" id="logout_nav_item" href="#">Logout</a>
+                        </li>                        
+                    </ul>
+                </div>
+
+                <div class="collapse" id="navbarSearch">
+                    <form class="d-flex ms-auto">
+                        <input id="searchInput" class="form-control me-2" type="search" placeholder="Search a Topic" aria-label="Search">
+                        <button id="btn_search" class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- -------------------------------------------Profile.html Realte codes strat from here ------------------------------------------- -->
+
+    <div class="container py-4" style="min-height: 80vh;">
+        <div class="row">
+            <!-- Profile Image Update Section -->
+            <div class="col-md-4 text-center">
+                <div class="profile-image-container">
+                    <p id="user_id" hidden>User Id</p>
+                    <div class="profile-img-wrapper" id="image_container">
+                        <img src="./images/postpage/avatar.jpg" id="profilePicture" alt="Profile Picture" class="profile-header-img mb-3 profile-img">
+                    </div>                    
+                    <!-- Button to trigger file input for profile image upload -->
+                    <button class="btn btn-outline-secondary btn-sm" onclick="document.getElementById('profilePicUpload').click();">
+                        <i class="fas fa-camera"></i> Upload
+                    </button>
+                    <!-- Hidden File Input for Profile Picture Upload -->
+                    <input type="file" id="profilePicUpload" class="d-none" onchange="uploadProfilePic();">
+                </div>
+                <h2 id="userName">RyanWick1</h2>
+                <p id="userBio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+    
+            <!-- User Details Edit Section -->
+            <div class="col-md-8">
+                <form id="editUserForm" class="user-details-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">New or Current Password</label>
+                        <input type="password" id="newPassword" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" class="form-control" placeholder="Bio..."></textarea>
+                    </div>
+                    <button type="button" id="saveChangesBtn" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </div>
+        <br>
+        <!-- Traveler Stats Section -->
+        <div class="travel-card container mt-0 mb-4">
+            <div class="profile-container">
+                <h3 class="card-title">Traveler Stats</h3>
+                <div class="row">
+                    <!-- First Column -->
+                    <div class="col-md-6">
+                        <div class="detail-item">
+                            <span class="title">Countries Visited:</span>
+                            <span id="countriesVisited" class="value">15</span>
+                            <button id="edit_btn_countriesVisited" class="btn btn-outline-secondary btn-sm edit-detail-btn" data-bs-toggle="modal" data-bs-target="#editCountriesModal">Edit <i class="fa-regular fa-pen-to-square"></i></button>
+                        </div>
+                        <div class="detail-item">
+                            <span class="title">Cities Explored:</span>
+                            <span id="citiesExplored" class="value">42</span>
+                            <button id="edit_btn_citiesExplored" class="btn btn-outline-secondary btn-sm edit-detail-btn" data-bs-toggle="modal" data-bs-target="#editCitiesModal">Edit <i class="fa-regular fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <!-- Second Column -->
+                    <div class="col-md-6">
+                        <div class="detail-item">
+                            <span class="title">Favorite Destination:</span>
+                            <span id="favoriteDestination" class="value">Kyoto, Japan</span>
+                            <button id="edit_btn_favoriteDestination" class="btn btn-outline-secondary btn-sm edit-detail-btn" data-bs-toggle="modal" data-bs-target="#editDestinationModal">Edit <i class="fa-regular fa-pen-to-square"></i></button>
+                        </div>
+                        <div class="detail-item">
+                            <span class="title">Bucket List:</span>
+                            <span id="bucketList" class="value">See the Northern Lights</span>
+                            <button id="edit_btn_bucketList" class="btn btn-outline-secondary btn-sm edit-detail-btn" data-bs-toggle="modal" data-bs-target="#editBucketListModal">Edit <i class="fa-regular fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modals for Eeach Edit Buttons ---------------->
+
+    <!-- Modal for Editing Countries Visited -->
+    <div class="modal fade" id="editCountriesModal" tabindex="-1" role="dialog" aria-labelledby="editCountriesModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editCountriesModalLabel">Edit Countries Visited</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editCountriesForm">
+                        <div class="form-group">
+                            <label for="countriesVisitedInput">Countries Visited</label>
+                            <input type="number" class="form-control" id="countriesVisitedInput" value="">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Editing Cities Explored -->
+    <div class="modal fade" id="editCitiesModal" tabindex="-1" role="dialog" aria-labelledby="editCitiesModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editCitiesModalLabel">Edit Cities Explored</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editCitiesForm">
+                        <div class="form-group">
+                            <label for="citiesExploredInput">Cities Explored</label>
+                            <input type="number" class="form-control" id="citiesExploredInput" value="">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Editing Favorite Destination -->
+    <div class="modal fade" id="editDestinationModal" tabindex="-1" role="dialog" aria-labelledby="editDestinationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editDestinationModalLabel">Edit Favorite Destination</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editDestinationForm">
+                        <div class="form-group">
+                            <label for="favoriteDestinationInput">Favorite Destination</label>
+                            <input type="text" class="form-control" id="favoriteDestinationInput" value="">
+                        </div>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Modal for Editing Bucket List -->
+    <div class="modal fade" id="editBucketListModal" tabindex="-1" role="dialog" aria-labelledby="editBucketListModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editBucketListModalLabel">Edit Bucket List</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editBucketListForm">
+                        <div class="form-group">
+                            <label for="bucketListInput">Bucket List</label>
+                            <textarea class="form-control" id="bucketListInput" rows="3"></textarea>
+                        </div>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+<!-- Start footer -->
+<br>
+<section class="container-fluid g-0 custom-footer">
+    <div class="container">
+        <div class="row py-4 text-white">
+            <div class="col-12 text-center">  <!-- Changed for centering text -->
+                Copyright &copy; 2024. All rights reserved.
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End footer -->
+
+
+<!-- Scripts -->
+<!-- Bootstrap's JavaScript bundle which includes jQuery and Popper.js -->
+<!-- Bootstrap 5 Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+<script src="./js/profile.js" type="module"></script>
+<script src="./js/nav.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+### ------- REGISTER page req and res check -------
+
+### Check a new registration
+POST http://localhost:3001/register/
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "123"
+}
+
+
+

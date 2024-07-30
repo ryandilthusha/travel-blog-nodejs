@@ -1,0 +1,34 @@
+### Get User Profile Details
+POST http://localhost:3001/userDetails/userProfile
+Content-Type: application/json
+
+{
+    "user_id":"1"
+}
+
+### Get User Stats
+POST http://localhost:3001/userDetails/userStats
+Content-Type: application/json
+
+{
+    "user_id":"1"
+}
+
+
+### Get Travel Stats
+POST http://localhost:3001/userDetails/travelStats
+Content-Type: application/json
+
+{
+    "user_id":"2"
+}
+
+
+### Get Most Popular Posts for Specific User
+POST http://localhost:3001/userDetails/popularPosts/
+Content-Type: application/json
+
+{
+    "user_id":"2"
+}
+

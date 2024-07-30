@@ -1,0 +1,25 @@
+### ------- PROFILE page req and res check -------
+
+### Get All Posts
+GET http://localhost:3001/index/allPosts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxNDM2Mjc0OSwiZXhwIjoxNzE0MzkxNTQ5fQ.UytCi07X0fiBWP2Jv4JJvSg1FgSUp02ZYkrJH40kvc0
+
+
+### Search a Title or Content
+GET http://localhost:3001/index/search?query=11
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxNDM2Mjc0OSwiZXhwIjoxNzE0MzkxNTQ5fQ.UytCi07X0fiBWP2Jv4JJvSg1FgSUp02ZYkrJH40kvc0
+
+
+### Search a Post by Category Name
+GET http://localhost:3001/index/search?query=Wildlife & Nature
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxMzk5NTgzNSwiZXhwIjoxNzE0MDI0NjM1fQ.6ORUS-s0gwtNxThAV21jSu_N5Ek9gv1aUuT6GsNvBpc
+
+
+### Get Most Popular Posts
+GET http://localhost:3001/index/popularPosts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxNDA4MTg5MSwiZXhwIjoxNzE0MTEwNjkxfQ.EN_vSKibaY_ZpldwfLYBM7zSupTmmk0V5_hBA2hDSDY
+

@@ -1,0 +1,94 @@
+/* --------------------- Login Css File --------------------- */
+
+
+/* Specific styles for the login page's main content area */
+.login-main-content {
+    padding-top: 80px; /* Adjust this value based on the height of your navbar */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991px) {
+    .login-main-content {
+      padding-top: 70px; /* Slightly less padding for smaller screens if navbar height changes */
+    }
+  }
+  
+  /* Ensure the login card is visually distinct and centered */
+  .login-card {
+    margin-top: 20px; /* Additional top margin for visual spacing from the navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  }
+  
+  /* Enhance input fields and buttons for better user experience */
+  .form-control, .btn {
+    height: 48px; /* Larger touch targets for better interaction */
+    font-size: 16px; /* Improved readability */
+  }
+  
+  /* Additional padding for elements inside the card for a spacious layout */
+  .card-body {
+    padding: 20px; /* Spacious padding inside the card for a better layout */
+  }
+  
+
+
+
+
+
+  /* ------------ Footer Styles ------------*/
+.custom-footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Moved from inline style to CSS for better maintenance */
+    display: flex;  /* Using Flexbox */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    padding: 1px 0; /* Padding for some spacing around the content */
+}
+
+.custom-footer .container {
+    width: 100%;  /* Ensures container takes full width available */
+    max-width: 960px; /* Maximum width of the content if needed */
+}
+
+.custom-footer .row {
+    flex-grow: 1; /* Ensures it takes available space in flex container */
+}
+
+.custom-footer .col-12 {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+
+
+
+
+
+
+
+
+/* --------------------- Register Css File --------------------- */
+/* Registration page specific styles to avoid conflicts with login page */
+.register-main-content {
+    padding-top: 80px; /* Space from the top of the viewport */
+}
+
+@media (max-width: 991px) {
+    .register-main-content {
+      padding-top: 70px; /* Adjust for smaller screens */
+    }
+}
+
+.register-card {
+    margin-top: 20px; /* Visual spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for distinct appearance */
+}
+
+.form-control, .btn {
+    height: 48px; /* Consistent height with login page for uniformity */
+    font-size: 16px; /* Larger font size for better readability */
+}
+
+.card-body {
+    padding: 25px; /* More padding for a spacious feel */
+}

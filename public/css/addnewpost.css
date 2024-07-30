@@ -1,0 +1,101 @@
+/* General Styles for Add Post Container */
+.container.addPost {
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Form styling */
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+/* Button Styling */
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-primary {
+    border-color: #35b8d0;
+    background-color: #94e0ee;
+    color: rgb(0, 0, 0);
+}
+
+.btn-primary:hover {
+    background-color: #35d2ef;
+    transform: scale(1.03); /* Slight scale effect on hover */
+}
+
+.btn-secondary:hover {
+    background-color: #2d2f31;
+    transform: scale(1.03); /* Slight scale effect on hover */
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Category Section */
+.category-section {
+    border-top: 2px solid #e9ecef;
+    padding-top: 15px;
+}
+
+.form-check-label {
+    margin-left: 5px;
+}
+
+/* Adjustments for spacing and alignment */
+.row.gx-5 {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.row.gx-5 > [class^="col"] {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+.photo-upload-btn {
+    background: #eee; /* Light grey background */
+    border: 2px dashed #ccc; /* Dashed border style */
+    color: #666; /* Dark grey text color */
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px 20px;
+    display: inline-block;
+    width: auto;
+}
+
+#file-chosen {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.d-none {
+    display: none;
+}

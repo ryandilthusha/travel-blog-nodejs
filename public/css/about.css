@@ -1,0 +1,21 @@
+
+.our_offer {
+    position: relative;
+    margin: 0 auto;
+  }
+
+.our_offer img {vertical-align: middle;}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); 
+    background: rgba(255, 255, 255, 0.8); 
+    color: #000000;
+    width: 100%;
+    padding: 20px;
+    }
+p {
+    text-align: justify;
+}
+

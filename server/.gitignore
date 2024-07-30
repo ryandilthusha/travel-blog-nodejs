@@ -1,0 +1,24 @@
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# Editor directories and files
+.vscode/
+
+# Dependency locks
+package-lock.json
+
+
+# Ignore all files in the public/images directory
+public/images/*
+public/pro-images/*
+
+# Alternatively, if you want to ignore the entire public directory
+# public/
+
+# Optionally, ignore specific file types in the public directory
+public/*.jpg
+public/*.png
+ublic/*.gif

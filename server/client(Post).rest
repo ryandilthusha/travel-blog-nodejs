@@ -1,0 +1,52 @@
+### ------- POST page req and res check -------
+
+### Get a Post Specific Details
+POST http://localhost:3001/post/getPostData
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxNDMzNzk2NSwiZXhwIjoxNzE0MzY2NzY1fQ.sGyQ1nmKWz6RjWf3wG72JyGJsXtEWTSTAf-3gP9W4A0
+
+{
+    "postId" : "1"
+}
+
+
+### Get a Post Specific Comment Details
+POST http://localhost:3001/post/getCommentData
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTcxNDM0OTExNCwiZXhwIjoxNzE0Mzc3OTE0fQ.D8oAh1bXWWU3VJvVR4uAIUEe6H604GgqCiIEcK_A3xk
+
+{
+    "postId" : "3"
+}
+
+
+### Get likes count and comments count for a specific post
+POST http://localhost:3001/post/getLikesCount
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxMzUzMjQ4NSwiZXhwIjoxNzEzNTYxMjg1fQ.nYuorPYD67riSaj6G3KMvUaA8IDClrus-nmG_pq-kSo
+
+{
+    "postId" : "1"
+}
+
+
+### Insert a comment to the database
+POST http://localhost:3001/post/makeComment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxMzUzMjQ4NSwiZXhwIjoxNzEzNTYxMjg1fQ.nYuorPYD67riSaj6G3KMvUaA8IDClrus-nmG_pq-kSo
+
+{
+    "postId" : "1",
+    "comment" : "This is the comment 3"
+}
+
+
+
+### Update/Edit a comment to the database
+POST http://localhost:3001/post/updateComment/18
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcxNDAwNjg1MiwiZXhwIjoxNzE0MDM1NjUyfQ.fsKCOQwZklkcqZkCc3NbRHZszt7Ow0y47jAHOVkaVWY
+
+{
+    "commentText" : "This is the comment 3"
+}
